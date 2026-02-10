@@ -5,11 +5,13 @@ Portfolio profesional desarrollado con Next.js, TypeScript y TailwindCSS con un 
 ## ✨ Características
 
 - **Diseño Moderno**: Interfaz atractiva con gradientes, animaciones y efectos visuales
+- **Sistema de Configuración Centralizado**: Todo editable desde `config.json`
+- **Multiidioma**: Soporte para Español e Inglés
 - **Totalmente Responsive**: Optimizado para todos los dispositivos
 - **Performance**: Optimizado para carga rápida y SEO
 - **TypeScript**: Código tipado para mayor robustez
 - **Animaciones**: Transiciones suaves y efectos interactivos
-- **Fácil Personalización**: Componentes modulares y variables CSS
+- **Fácil Personalización**: Sin necesidad de tocar código
 
 ## 🛠️ Tecnologías
 
@@ -46,39 +48,61 @@ pnpm dev
 
 4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-## 🎨 Personalización
+## 🎨 Personalización Fácil
 
-### Información Personal
+### ⚡ Archivo de Configuración (`config.json`)
 
-Edita los siguientes archivos para personalizar tu portfolio:
+**TODO el contenido se edita desde un solo archivo: `config.json`**
 
-1. **`src/components/Hero.tsx`**: Cambia tu nombre y título
-2. **`src/components/About.tsx`**: Actualiza tu biografía y estadísticas
-3. **`src/components/Projects.tsx`**: Agrega tus proyectos
-4. **`src/components/Skills.tsx`**: Modifica tus habilidades
-5. **`src/components/Contact.tsx`**: Actualiza tu información de contacto
+Este archivo controla:
+- ✅ Información personal (nombre, email, teléfono)
+- ✅ Redes sociales (GitHub, LinkedIn, Twitter)
+- ✅ Colores del tema
+- ✅ Fuentes tipográficas
+- ✅ Textos en español e inglés
+- ✅ Proyectos y descripciones
+- ✅ Skills y niveles
+- ✅ Metadatos SEO
 
-### Colores y Diseño
+### 📝 Guías de Personalización
 
-Los colores se definen en `src/app/globals.css`:
+Lee estas guías para personalizar tu portfolio:
 
-```css
-:root {
-  --color-primary: #00ff88;    /* Color principal */
-  --color-secondary: #0099ff;  /* Color secundario */
-  --color-accent: #ff0066;     /* Color de acento */
-  --color-bg-dark: #0a0e1a;    /* Fondo oscuro */
-  --color-bg-darker: #050810;  /* Fondo más oscuro */
+1. **[CONFIG-GUIDE.md](CONFIG-GUIDE.md)** - Guía completa para editar `config.json`
+2. **[QUICKSTART.md](QUICKSTART.md)** - Inicio rápido
+3. **[I18N-GUIDE.md](I18N-GUIDE.md)** - Guía de internacionalización
+
+### Ejemplo Rápido: Cambiar Tu Información
+
+Abre `config.json` y edita:
+
+```json
+{
+  "personal": {
+    "name": "Tu Nombre Aquí",
+    "email": "tu@email.com",
+    "phone": "+57 300 123 4567",
+    "social": {
+      "github": "https://github.com/tuusuario",
+      "linkedin": "https://linkedin.com/in/tuusuario"
+    }
+  }
 }
 ```
 
-### Fuentes
+### Ejemplo: Cambiar Colores del Tema
 
-El proyecto usa:
-- **Orbitron**: Para títulos y elementos display
-- **Quicksand**: Para el cuerpo de texto
-
-Puedes cambiarlas en `src/app/globals.css`.
+```json
+{
+  "theme": {
+    "colors": {
+      "primary": "#00ff88",    // Verde neón
+      "secondary": "#0099ff",  // Azul
+      "accent": "#ff0066"      // Rosa
+    }
+  }
+}
+```
 
 ## 📤 Despliegue en GitHub Pages
 

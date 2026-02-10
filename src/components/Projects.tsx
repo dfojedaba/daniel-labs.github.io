@@ -1,9 +1,11 @@
 'use client'
 
 import { useLanguage } from '@/contexts/LanguageContext'
+import { content, personalInfo } from '@/lib/config'
 
 export default function Projects() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+  const projects = content.projects.items
 
   return (
     <section id="proyectos" className="min-h-screen py-20 relative">
@@ -19,7 +21,7 @@ export default function Projects() {
           </p>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {t.projects.items.map((project, index) => (
+            {projects.map((project, index) => (
               <div
                 key={index}
                 className="group relative glass-effect rounded-2xl p-6 border border-[var(--color-primary)]/20 hover:border-[var(--color-primary)]/40 transition-all duration-300 hover:scale-105"
@@ -43,7 +45,7 @@ export default function Projects() {
                   </h3>
                   
                   <p className="text-[var(--color-text-muted)] mb-4 leading-relaxed">
-                    {project.description}
+                    {content.projects.getProjectDescription(project, language)}
                   </p>
                   
                   {/* Tech stack */}
@@ -60,7 +62,9 @@ export default function Projects() {
                   
                   {/* Link */}
                   <a
-                    href="#"
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-[var(--color-primary)] font-medium hover:gap-3 transition-all"
                   >
                     {t.projects.viewProject}
@@ -75,7 +79,7 @@ export default function Projects() {
           
           <div className="text-center mt-12">
             <a
-              href="https://github.com/tuusuario"
+              href={personalInfo.social.github}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 border-2 border-[var(--color-primary)] rounded-lg font-semibold hover:bg-[var(--color-primary)]/10 transition-colors"

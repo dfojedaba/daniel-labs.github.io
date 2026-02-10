@@ -2,14 +2,15 @@
 
 import { useEffect, useState } from 'react'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { personalInfo, content } from '@/lib/config'
 
 export default function Hero() {
   const { t, language } = useLanguage()
   const [displayText, setDisplayText] = useState('')
-  const fullText = t.hero.title
+  const fullText = personalInfo.getRole(language)
   
   useEffect(() => {
-    setDisplayText('') // Reset text when language changes
+    setDisplayText('')
     let index = 0
     const timer = setInterval(() => {
       if (index <= fullText.length) {
@@ -33,13 +34,13 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6 opacity-0 animate-fade-in">
             <span className="inline-block px-4 py-2 border border-[var(--color-primary)] rounded-full text-sm font-medium glow-border">
-              👋 {t.hero.greeting}
+              👋 {content.hero.getGreeting(language)}
             </span>
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black mb-6 opacity-0 animate-fade-in animation-delay-200">
             <span className="bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-secondary)] to-[var(--color-accent)] bg-clip-text text-transparent">
-              Daniel F. Ojeda
+              {personalInfo.name}
             </span>
           </h1>
           
@@ -49,7 +50,7 @@ export default function Hero() {
           </div>
           
           <p className="text-lg md:text-xl text-[var(--color-text-muted)] mb-12 max-w-2xl mx-auto opacity-0 animate-slide-up animation-delay-600">
-            {t.hero.description}
+            {content.hero.getDescription(language)}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-slide-up animation-delay-800">

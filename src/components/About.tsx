@@ -1,9 +1,29 @@
 'use client'
 
 import { useLanguage } from '@/contexts/LanguageContext'
+import { content } from '@/lib/config'
 
 export default function About() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+  
+  const stats = [
+    { 
+      number: content.about.stats.experience.number, 
+      label: content.about.stats.experience.getLabel(language) 
+    },
+    { 
+      number: content.about.stats.projects.number, 
+      label: content.about.stats.projects.getLabel(language) 
+    },
+    { 
+      number: content.about.stats.technologies.number, 
+      label: content.about.stats.technologies.getLabel(language) 
+    },
+    { 
+      number: content.about.stats.commitment.number, 
+      label: content.about.stats.commitment.getLabel(language) 
+    }
+  ]
   
   return (
     <section id="sobre-mí" className="min-h-screen flex items-center py-20 relative">
@@ -20,27 +40,22 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity" />
               <div className="relative glass-effect rounded-2xl p-8 border-2 border-[var(--color-primary)]/20">
                 <div className="aspect-square bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-secondary)]/20 rounded-xl flex items-center justify-center">
-                  <div className="text-8xl">👨‍💻</div>
+                  <div className="text-8xl">{content.about.emoji}</div>
                 </div>
               </div>
             </div>
             
             <div className="space-y-6">
               <p className="text-lg text-[var(--color-text-muted)] leading-relaxed">
-                {t.about.paragraph1}
+                {content.about.getParagraph1(language)}
               </p>
               
               <p className="text-lg text-[var(--color-text-muted)] leading-relaxed">
-                {t.about.paragraph2}
+                {content.about.getParagraph2(language)}
               </p>
               
               <div className="grid grid-cols-2 gap-4 pt-6">
-                {[
-                  { number: '3+', label: t.about.stats.experience },
-                  { number: '20+', label: t.about.stats.projects },
-                  { number: '10+', label: t.about.stats.technologies },
-                  { number: '100%', label: t.about.stats.commitment }
-                ].map((stat, index) => (
+                {stats.map((stat, index) => (
                   <div key={index} className="glass-effect p-4 rounded-lg text-center border border-[var(--color-primary)]/20 hover:border-[var(--color-primary)]/40 transition-colors">
                     <div className="text-3xl font-display font-bold text-[var(--color-primary)] mb-1">
                       {stat.number}
