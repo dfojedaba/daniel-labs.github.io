@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Projects from '@/components/Projects'
@@ -19,14 +20,16 @@ export default function Home() {
   if (!mounted) return null
 
   return (
-    <main className="relative z-10">
-      <Navigation />
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
-    </main>
+    <LanguageProvider>
+      <main className="relative z-10">
+        <Navigation />
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
+        <Footer />
+      </main>
+    </LanguageProvider>
   )
 }

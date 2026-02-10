@@ -1,9 +1,13 @@
 'use client'
 
+import { useLanguage } from '@/contexts/LanguageContext'
+
 export default function Skills() {
+  const { t } = useLanguage()
+  
   const skillCategories = [
     {
-      title: 'Frontend',
+      title: t.skills.categories.frontend,
       skills: [
         { name: 'React', level: 90 },
         { name: 'Next.js', level: 85 },
@@ -13,7 +17,7 @@ export default function Skills() {
       ]
     },
     {
-      title: 'Backend',
+      title: t.skills.categories.backend,
       skills: [
         { name: 'Node.js', level: 85 },
         { name: 'Python', level: 80 },
@@ -23,7 +27,7 @@ export default function Skills() {
       ]
     },
     {
-      title: 'DevOps & Tools',
+      title: t.skills.categories.devops,
       skills: [
         { name: 'Git', level: 90 },
         { name: 'Docker', level: 75 },
@@ -40,11 +44,11 @@ export default function Skills() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-4 text-center">
             <span className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] bg-clip-text text-transparent">
-              Habilidades
+              {t.skills.title}
             </span>
           </h2>
           <p className="text-center text-[var(--color-text-muted)] mb-16 text-lg">
-            Tecnologías y herramientas que domino
+            {t.skills.subtitle}
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -83,7 +87,7 @@ export default function Skills() {
           {/* Additional skills badges */}
           <div className="mt-16">
             <h3 className="text-2xl font-display font-bold mb-6 text-center">
-              Otras Tecnologías
+              {t.skills.otherTech}
             </h3>
             <div className="flex flex-wrap gap-3 justify-center">
               {[

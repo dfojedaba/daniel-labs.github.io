@@ -1,13 +1,17 @@
 'use client'
 
+import { useLanguage } from '@/contexts/LanguageContext'
+
 export default function About() {
+  const { t } = useLanguage()
+  
   return (
     <section id="sobre-mí" className="min-h-screen flex items-center py-20 relative">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-16 text-center">
             <span className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] bg-clip-text text-transparent">
-              Sobre Mí
+              {t.about.title}
             </span>
           </h2>
           
@@ -23,22 +27,19 @@ export default function About() {
             
             <div className="space-y-6">
               <p className="text-lg text-[var(--color-text-muted)] leading-relaxed">
-                Soy un desarrollador apasionado por crear soluciones tecnológicas que marquen la diferencia. 
-                Con experiencia en desarrollo full stack, me especializo en construir aplicaciones web modernas, 
-                escalables y centradas en el usuario.
+                {t.about.paragraph1}
               </p>
               
               <p className="text-lg text-[var(--color-text-muted)] leading-relaxed">
-                Mi enfoque combina las mejores prácticas de desarrollo con diseño intuitivo, 
-                siempre buscando la excelencia técnica y la innovación constante.
+                {t.about.paragraph2}
               </p>
               
               <div className="grid grid-cols-2 gap-4 pt-6">
                 {[
-                  { number: '3+', label: 'Años de Experiencia' },
-                  { number: '20+', label: 'Proyectos Completados' },
-                  { number: '10+', label: 'Tecnologías Dominadas' },
-                  { number: '100%', label: 'Compromiso' }
+                  { number: '3+', label: t.about.stats.experience },
+                  { number: '20+', label: t.about.stats.projects },
+                  { number: '10+', label: t.about.stats.technologies },
+                  { number: '100%', label: t.about.stats.commitment }
                 ].map((stat, index) => (
                   <div key={index} className="glass-effect p-4 rounded-lg text-center border border-[var(--color-primary)]/20 hover:border-[var(--color-primary)]/40 transition-colors">
                     <div className="text-3xl font-display font-bold text-[var(--color-primary)] mb-1">

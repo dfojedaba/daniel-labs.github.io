@@ -1,12 +1,15 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Hero() {
+  const { t, language } = useLanguage()
   const [displayText, setDisplayText] = useState('')
-  const fullText = 'Desarrollador Full Stack'
+  const fullText = t.hero.title
   
   useEffect(() => {
+    setDisplayText('') // Reset text when language changes
     let index = 0
     const timer = setInterval(() => {
       if (index <= fullText.length) {
@@ -18,7 +21,7 @@ export default function Hero() {
     }, 100)
     
     return () => clearInterval(timer)
-  }, [])
+  }, [fullText, language])
 
   return (
     <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -30,13 +33,13 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6 opacity-0 animate-fade-in">
             <span className="inline-block px-4 py-2 border border-[var(--color-primary)] rounded-full text-sm font-medium glow-border">
-              👋 Hola, soy
+              👋 {t.hero.greeting}
             </span>
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black mb-6 opacity-0 animate-fade-in animation-delay-200">
             <span className="bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-secondary)] to-[var(--color-accent)] bg-clip-text text-transparent">
-              Tu Nombre
+              Daniel F. Ojeda
             </span>
           </h1>
           
@@ -46,8 +49,7 @@ export default function Hero() {
           </div>
           
           <p className="text-lg md:text-xl text-[var(--color-text-muted)] mb-12 max-w-2xl mx-auto opacity-0 animate-slide-up animation-delay-600">
-            Creando experiencias digitales innovadoras con código limpio y diseño impactante. 
-            Especializado en desarrollo web moderno y soluciones escalables.
+            {t.hero.description}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-slide-up animation-delay-800">
@@ -55,13 +57,13 @@ export default function Hero() {
               onClick={() => document.getElementById('proyectos')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-8 py-4 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] rounded-lg font-semibold text-[var(--color-bg-dark)] hover:scale-105 transition-transform shadow-lg hover:shadow-[var(--color-primary)]/50"
             >
-              Ver Proyectos
+              {t.hero.viewProjects}
             </button>
             <button 
               onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-8 py-4 border-2 border-[var(--color-primary)] rounded-lg font-semibold hover:bg-[var(--color-primary)]/10 transition-colors glow-border"
             >
-              Contáctame
+              {t.hero.contactMe}
             </button>
           </div>
         </div>
