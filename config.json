@@ -1,20 +1,19 @@
 {
   "personal": {
-    "name": "Tu Nombre",
+    "name": "Daniel F. Ojeda",
     "role": {
       "es": "Desarrollador Full Stack",
       "en": "Full Stack Developer"
     },
-    "email": "tu@email.com",
-    "phone": "+57 300 123 4567",
+    "email": "drkmdaniel@gmail.com",
+    "phone": "+57 301 263 6539",
     "location": {
-      "es": "Villavicencio, Colombia",
-      "en": "Villavicencio, Colombia"
+      "es": "Bogotá, Colombia",
+      "en": "Bogotá, Colombia"
     },
     "social": {
-      "github": "https://github.com/tuusuario",
-      "linkedin": "https://linkedin.com/in/tuusuario",
-      "twitter": "https://twitter.com/tuusuario"
+      "github": "https://github.com/dfojedaba",
+      "linkedin": "https://linkedin.com/in/drkmdaniel"
     }
   },
   "theme": {
@@ -39,23 +38,23 @@
         "en": "Hi, I'm"
       },
       "description": {
-        "es": "Creando experiencias digitales innovadoras con código limpio y diseño impactante. Especializado en desarrollo web moderno y soluciones escalables.",
-        "en": "Creating innovative digital experiences with clean code and impactful design. Specialized in modern web development and scalable solutions."
+        "es": "Diseñando soluciones digitales innovadoras que conectan plataformas, automatizan procesos y transforman datos en valor. Especializado en backend, integraciones entre sistemas, desarrollo web y arquitecturas escalables.",
+        "en": "Designing innovative digital solutions that connect platforms, automate processes, and transform data into value. Specializing in backend development, system integrations, web development, and scalable architectures."
       }
     },
     "about": {
       "emoji": "👨‍💻",
       "paragraph1": {
-        "es": "Soy un desarrollador apasionado por crear soluciones tecnológicas que marquen la diferencia. Con experiencia en desarrollo full stack, me especializo en construir aplicaciones web modernas, escalables y centradas en el usuario.",
-        "en": "I'm a developer passionate about creating technological solutions that make a difference. With experience in full stack development, I specialize in building modern, scalable, and user-centered web applications."
+        "es": "Soy un ingeniero de soluciones y arquitecto tecnológico enfocado en diseñar plataformas escalables, automatizar operaciones y conectar sistemas complejos. Combino desarrollo con arquitectura de soluciones e integraciones entre plataformas para optimizar la operación tecnológica y ser más costo-eficiente.",
+        "en": "I am a solutions engineer and technology architect focused on designing scalable platforms, automating operations, and connecting complex systems. I combine development with solution architecture and platform integrations to optimize technological operations and be more cost-efficient."
       },
       "paragraph2": {
-        "es": "Mi enfoque combina las mejores prácticas de desarrollo con diseño intuitivo, siempre buscando la excelencia técnica y la innovación constante.",
-        "en": "My approach combines development best practices with intuitive design, always seeking technical excellence and constant innovation."
+        "es": "Trabajo con Python y JavaScript (React, Next.js, Angular), desarrollando APIs e integraciones con plataformas como Zabbix, Openshift, n8n, Azure, Twilio y Kubernetes. También tengo experiencia en observabilidad y analítica de datos con Grafana y Power BI, así como en ecosistemas ITSM con GLPI, CMDB y prácticas ITIL, apoyándome en bases de datos como PostgreSQL, Oracle, MySQL y SQL Server.",
+        "en": "I work with Python and JavaScript (React, Next.js, Angular), developing APIs and integrations with platforms like Zabbix, Openshift, n8n, Azure, Twilio and Kubernetes. I also have experience in observability and data analytics with Grafana and Power BI, as well as in ITSM ecosystems with GLPI, CMDB, and ITIL practices, leveraging databases such as PostgreSQL, Oracle, MySQL, and SQL Server."
       },
       "stats": {
         "experience": {
-          "number": "3+",
+          "number": "5+",
           "label": {
             "es": "Años de Experiencia",
             "en": "Years of Experience"
@@ -130,41 +129,56 @@
       "categories": [
         {
           "name": {
-            "es": "Frontend",
-            "en": "Frontend"
+            "es": "Ingeniería de Plataforma y Observabilidad",
+            "en": "Platform Engineering / Observability"
           },
           "items": [
-            { "name": "React", "level": 90 },
-            { "name": "Next.js", "level": 85 },
-            { "name": "TypeScript", "level": 88 },
-            { "name": "TailwindCSS", "level": 92 },
-            { "name": "Vue.js", "level": 75 }
+            { "name": "Grafana", "level": 90 },
+            { "name": "Zabbix", "level": 92 },
+            { "name": "Power BI", "level": 88 },
+            { "name": "Monitoring & Alerting", "level": 92 },
+            { "name": "Log Management (Loki / observability)", "level": 85 }
+          ]
+        },
+                {
+          "name": {
+            "es": "ITSM y Plataformas de Servicio",
+            "en": "ITSM / Service Platforms"
+          },
+          "items": [
+            { "name": "GLPI", "level": 90 },
+            { "name": "CMDB Design & Management", "level": 88 },
+            { "name": "ITIL Processes", "level": 85 },
+            { "name": "Ticketing & Workflow Automation", "level": 90 },
+            { "name": "BMC Remedy", "level": 80 },
+            { "name": "Service Integration (ITSM APIs)", "level": 85 }
           ]
         },
         {
           "name": {
-            "es": "Backend",
-            "en": "Backend"
+            "es": "Backend y Automatización",
+            "en": "Backend / Automation"
           },
           "items": [
-            { "name": "Node.js", "level": 85 },
-            { "name": "Python", "level": 80 },
-            { "name": "PostgreSQL", "level": 78 },
-            { "name": "MongoDB", "level": 82 },
-            { "name": "GraphQL", "level": 75 }
+            { "name": "Python", "level": 89 },
+            { "name": "API Design (REST / FastAPI)", "level": 92 },
+            { "name": "Node.js", "level": 80 },
+            { "name": "Automation (n8n / Make)", "level": 88 },
+            { "name": "AI Integrations", "level": 80 },
+            { "name": "Airflow", "level": 85 }
           ]
         },
         {
           "name": {
-            "es": "DevOps & Tools",
-            "en": "DevOps & Tools"
+            "es": "Cloud y DevOps",
+            "en": "Cloud / DevOps"
           },
           "items": [
-            { "name": "Git", "level": 90 },
-            { "name": "Docker", "level": 75 },
-            { "name": "AWS", "level": 70 },
-            { "name": "CI/CD", "level": 72 },
-            { "name": "Linux", "level": 80 }
+            { "name": "Kubernetes", "level": 85 },
+            { "name": "Docker / Containers", "level": 85 },
+            { "name": "Linux", "level": 80 },
+            { "name": "CI/CD", "level": 82 },
+            { "name": "Cloud Architecture (Azure)", "level": 80 }
           ]
         }
       ],
@@ -173,14 +187,26 @@
         "WebSockets",
         "Redis",
         "Nginx",
-        "Jest",
-        "Cypress",
-        "Webpack",
-        "Vite",
-        "Prisma",
+        "n8n",
+        "Make",
+        "Twilio",
+        "Azure Services",
+        "AKS",
         "Figma",
         "Photoshop",
-        "Agile/Scrum"
+        "Agile/Scrum",
+        "Git / GitHub",
+        "Unit Testing",
+        "CI/CD Pipelines",
+        "PostgreSQL",
+        "MySQL",
+        "Oracle",
+        "SQL Server",
+        "System Integrations",
+        "AIOps",
+        "Microservices",
+        "Data Analytics",
+        "Observability"
       ]
     }
   },

@@ -88,7 +88,8 @@ export const translations = {
     footer: {
       rights: 'Todos los derechos reservados.',
       backToTop: 'Volver arriba ↑',
-      madeWith: 'Hecho con 💚 usando Next.js, TypeScript y TailwindCSS'
+      madeWith: 'Hecho con 💚 usando Next.js, TypeScript y TailwindCSS.',
+      phrase: '"La lealtad es una calle de doble sentido. Si te la pido, la tendrás de mi parte." — H.S.'
     }
   },
   en: {
@@ -180,7 +181,8 @@ export const translations = {
     footer: {
       rights: 'All rights reserved.',
       backToTop: 'Back to top ↑',
-      madeWith: 'Made with 💚 using Next.js, TypeScript and TailwindCSS'
+      madeWith: 'Made with 💚 using Next.js, TypeScript and TailwindCSS',
+      phrase: '"Loyalty is a two-way street. If I\'m asking for it from you, then you\'re getting it from me." — H.S.'
     }
   }
 }

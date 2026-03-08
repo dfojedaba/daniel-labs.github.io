@@ -30,8 +30,7 @@ npm install
 ```typescript
 // Líneas 67-69: Actualiza tus URLs
 { name: 'GitHub', url: 'https://github.com/tuusuario' },
-{ name: 'LinkedIn', url: 'https://linkedin.com/in/tuusuario' },
-{ name: 'Twitter', url: 'https://twitter.com/tuusuario' }
+{ name: 'LinkedIn', url: 'https://linkedin.com/in/tuusuario' }
 ```
 
 ### 3. Probar Localmente

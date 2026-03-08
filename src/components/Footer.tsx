@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-[var(--color-text-muted)] text-sm">
-            © {currentYear} Tu Nombre. {t.footer.rights}
+            © {currentYear} drkmdaniel. {t.footer.rights}
           </div>
           
           <div className="flex gap-6 text-sm">
@@ -26,6 +26,8 @@ export default function Footer() {
         
         <div className="text-center mt-4 text-xs text-[var(--color-text-muted)]">
           {t.footer.madeWith}
+          <br />
+          {t.footer.phrase}
         </div>
       </div>
     </footer>
